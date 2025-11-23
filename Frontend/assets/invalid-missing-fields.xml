@@ -1,0 +1,29 @@
+<MRLData>
+    <Record>
+        <!-- Missing MaterialId -->
+        <Plant>001</Plant>
+        <MRLNumber>MRL-5001</MRLNumber>
+        <ValidFrom>2025-01-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5002</MaterialId>
+        <!-- Missing Plant -->
+        <MRLNumber>MRL-5002</MRLNumber>
+        <ValidFrom>2025-02-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5003</MaterialId>
+        <Plant>003</Plant>
+        <MRLNumber>MRL-5003</MRLNumber>
+        <ValidFrom>2025-03-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <!-- Missing Status -->
+    </Record>
+</MRLData>
+

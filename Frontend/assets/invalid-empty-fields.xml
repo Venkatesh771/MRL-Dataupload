@@ -1,0 +1,29 @@
+<MRLData>
+    <Record>
+        <MaterialId></MaterialId>
+        <Plant>001</Plant>
+        <MRLNumber>MRL-6001</MRLNumber>
+        <ValidFrom>2025-01-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>6002</MaterialId>
+        <Plant></Plant>
+        <MRLNumber>MRL-6002</MRLNumber>
+        <ValidFrom>2025-02-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>6003</MaterialId>
+        <Plant>003</Plant>
+        <MRLNumber></MRLNumber>
+        <ValidFrom>2025-03-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+</MRLData>
+

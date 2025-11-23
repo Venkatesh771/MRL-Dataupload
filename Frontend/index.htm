@@ -40,22 +40,72 @@
                 <img src="assets/img1.png" alt="Hero Image" class="hero-image">
 
                 <div class="hero-buttons">
-                    <button class="btn-import">
+                    <input type="file" id="fileInput" accept=".xml" style="display: none;">
+                    <button class="btn-import" id="importBtn">
                         Import Data<i class="fa-solid fa-file-import"></i>
                     </button>
 
-                    <button class="btn-submit">
+                    <button class="btn-submit" id="submitBtn">
                         Submit Data<i class="fa-solid fa-paper-plane"></i>
                     </button>
                 </div>
+
+                <div id="messageArea" style="margin-top: 30px; min-height: 50px;"></div>
 
             </div>
         </div>
     </section>
 
+    <!-- Preview Popup -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+    <div id="previewPopup" class="preview-popup">
+        <div class="preview-popup-header">
+            <h3 class="preview-popup-title">Import Preview</h3>
+            <button class="preview-popup-close" id="closePreviewBtn">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+        <div class="preview-popup-content">
+            <div class="preview-xml-section">
+                <h4 class="preview-section-title">Imported XML Data</h4>
+                <div class="preview-xml-data" id="previewXmlData"></div>
+            </div>
+            <div class="preview-validation-section" id="previewValidationSection">
+                <h4 class="preview-section-title">Validation Status</h4>
+                <div class="preview-validation-errors" id="previewValidationErrors"></div>
+            </div>
+        </div>
+        <div class="preview-popup-footer">
+            <button class="btn-confirm-import" id="confirmImportBtn">
+                Confirm Import<i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Import Confirmed Popup -->
+    <div id="confirmPopupOverlay" class="popup-overlay"></div>
+    <div id="confirmPopup" class="confirm-popup">
+        <div class="confirm-popup-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="confirm-popup-message">Import confirmed, please submit the data</div>
+        <button class="btn-ok" id="okBtn">OK</button>
+    </div>
+
+    <!-- Submit Success Popup -->
+    <div id="submitSuccessPopupOverlay" class="popup-overlay"></div>
+    <div id="submitSuccessPopup" class="confirm-popup">
+        <div class="confirm-popup-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="confirm-popup-message" id="submitSuccessMessage">Data submitted successfully!</div>
+        <button class="btn-ok" id="submitOkBtn">OK</button>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

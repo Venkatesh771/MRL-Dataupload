@@ -1,0 +1,18 @@
+<MRLData>
+    <Record>
+        <MaterialId>4001</MaterialId>
+        <Plant>111</Plant>
+        <MRLNumber>MRL-4001</MRLNumber>
+        <ValidFrom>2025-01-01</ValidFrom>
+        <ValidTo>2025-11-30</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+    <Record>
+        <MaterialId>4002</MaterialId>
+        <Plant>112</Plant>
+        <MRLNumber>MRL-4002</MRLNumber>
+        <ValidFrom>2025-02-10</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>INACTIVE</Status>
+    </Record>
+</MRLData>

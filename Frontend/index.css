@@ -131,3 +131,340 @@ body {
     margin-left: 7px;
     font-size: 1.1rem;
 }
+
+/* Preview Popup Styles */
+.preview-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: white;
+    border: 2px solid #D9A299;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    font-family: "Quicksand", sans-serif;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    min-width: 800px;
+    max-width: 1200px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.preview-popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.preview-popup.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.preview-popup-header {
+    background-color: #D9A299;
+    color: white;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #c89288;
+    border-radius: 14px 14px 0 0;
+}
+
+.preview-popup-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.preview-popup-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.2s ease;
+}
+
+.preview-popup-close:hover {
+    transform: rotate(90deg);
+}
+
+.preview-popup-content {
+    padding: 25px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.preview-xml-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.preview-validation-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.preview-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4A4947;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #D9A299;
+}
+
+.preview-xml-data {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+.preview-validation-errors {
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .preview-popup {
+        min-width: 90%;
+        max-width: 95%;
+        border-radius: 12px;
+    }
+
+    .preview-popup-header {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .preview-popup-footer {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .preview-popup-content {
+        flex-direction: column;
+    }
+}
+
+.validation-error {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #856404;
+    font-size: 0.95rem;
+}
+
+.validation-error.highlight {
+    background-color: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+    animation: pulse 0.5s ease-in-out;
+}
+
+.validation-success {
+    background-color: #e8f0ea;
+    border-left: 4px solid #819067;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #2d3e2f;
+    font-size: 0.95rem;
+}
+
+.preview-popup-footer {
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 14px 14px;
+}
+
+.btn-confirm-import {
+    padding: 6px 20px;
+    border: 2px solid #5D866C;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background-color: #5D866C;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-confirm-import i {
+    font-size: 0.85rem;
+}
+
+.btn-confirm-import:hover:not(:disabled) {
+    background-color: #4d6f5a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(93, 134, 108, 0.3);
+}
+
+.btn-confirm-import:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(45deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+/* Import Confirmed Popup Styles */
+.confirm-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: white;
+    border: 2px solid #5D866C;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10001;
+    font-family: "Quicksand", sans-serif;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    min-width: 400px;
+    max-width: 500px;
+    padding: 25px 30px;
+    text-align: center;
+    pointer-events: none;
+    visibility: hidden;
+    display: block;
+}
+
+.confirm-popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+    visibility: visible;
+}
+
+.confirm-popup.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.confirm-popup-icon {
+    font-size: 4.5rem;
+    color: #5D866C;
+    margin-bottom: 15px;
+    animation: bounceIn 0.6s ease-out;
+}
+
+.confirm-popup-message {
+    font-size: 1.1rem;
+    color: #4A4947;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.btn-ok {
+    padding: 6px 28px;
+    border: 2px solid #5D866C;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background-color: #5D866C;
+    color: white;
+}
+
+.btn-ok:hover {
+    background-color: #4d6f5a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(93, 134, 108, 0.3);
+}

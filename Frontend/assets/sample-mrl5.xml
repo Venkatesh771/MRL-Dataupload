@@ -1,0 +1,47 @@
+<MRLData>
+    <Record>
+        <MaterialId>5001</MaterialId>
+        <Plant>501</Plant>
+        <MRLNumber>MRL-5001</MRLNumber>
+        <ValidFrom>2025-08-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5002</MaterialId>
+        <Plant>502</Plant>
+        <MRLNumber>MRL-5002</MRLNumber>
+        <ValidFrom>2025-09-15</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5003</MaterialId>
+        <Plant>503</Plant>
+        <MRLNumber>MRL-5003</MRLNumber>
+        <ValidFrom>2025-10-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>INACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5004</MaterialId>
+        <Plant>504</Plant>
+        <MRLNumber>MRL-5004</MRLNumber>
+        <ValidFrom>2025-11-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>5005</MaterialId>
+        <Plant>505</Plant>
+        <MRLNumber>MRL-5005</MRLNumber>
+        <ValidFrom>2025-12-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+</MRLData>
+

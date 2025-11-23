@@ -1,0 +1,20 @@
+<MRLData>
+    <Record>
+        <MaterialId>3001</MaterialId>
+        <Plant>001</Plant>
+        <MRLNumber>MRL-3001</MRLNumber>
+        <ValidFrom>2025-01-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    <!-- Missing closing Record tag -->
+    
+    <Record>
+        <MaterialId>3002</MaterialId>
+        <Plant>002</Plant>
+        <!-- Missing MRLNumber -->
+        <ValidFrom>2025-02-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+</MRLData>
+

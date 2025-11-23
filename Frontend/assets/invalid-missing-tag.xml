@@ -1,0 +1,20 @@
+<MRLData>
+    <Record>
+        <MaterialId>2001</MaterialId>
+        <Plant>001</Plant>
+        <MRLNumber>MRL-2001</MRLNumber>
+        <ValidFrom>2025-01-01</ValidFrom>
+        <ValidTo>2025-12-31</ValidTo>
+        <Status>ACTIVE</Status>
+    </Record>
+
+    <Record>
+        <MaterialId>2002</MaterialId>
+        <Plant>002</Plant>
+        <MRLNumber>MRL-2002</MRLNumber>
+        <ValidFrom>2025-02-01</ValidFrom>
+        <!-- Missing ValidTo tag -->
+        <Status>ACTIVE</Status>
+    </Record>
+</MRLData>
+
